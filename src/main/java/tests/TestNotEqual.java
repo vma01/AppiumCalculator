@@ -10,10 +10,7 @@ import static enums.MathOperations.LEFT_PARENTHESES;
 import static enums.MathOperations.MINUS;
 import static enums.MathOperations.MULTIPLY;
 import static enums.MathOperations.RIGHT_PARENTHESES;
-import static org.hamcrest.core.Is.is;
-import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertThat;
 
 import io.appium.java_client.AppiumDriver;
 import org.junit.Before;
@@ -49,6 +46,6 @@ public class TestNotEqual {
 		pageObject.clickOnDigitButton(THIRD_INT);
 		pageObject.clickOnEqualButton();
 
-		assertNotEquals("Result isn't equal", Integer.valueOf(pageObject.resultView().getText()), EXPECTED_RESULT_SIN);
+		assertNotEquals("Result is equal", Integer.valueOf(pageObject.resultView().getText()), EXPECTED_RESULT_SIN);
 	}
 }

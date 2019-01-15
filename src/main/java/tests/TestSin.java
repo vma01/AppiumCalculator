@@ -10,7 +10,6 @@ import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
 
 import io.appium.java_client.AppiumDriver;
-import org.apache.tools.ant.types.Assertions;
 import org.junit.Before;
 import org.junit.Test;
 import pageobject.CalculatorPageObject;
