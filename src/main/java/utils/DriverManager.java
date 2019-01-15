@@ -1,21 +1,9 @@
 package utils;
 
-import static io.appium.java_client.remote.AndroidMobileCapabilityType.APP_ACTIVITY;
-import static io.appium.java_client.remote.AndroidMobileCapabilityType.APP_PACKAGE;
-import static io.appium.java_client.remote.AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS;
-import static io.appium.java_client.remote.MobileCapabilityType.AUTOMATION_NAME;
-import static io.appium.java_client.remote.MobileCapabilityType.DEVICE_NAME;
-import static io.appium.java_client.remote.MobileCapabilityType.NEW_COMMAND_TIMEOUT;
-import static io.appium.java_client.remote.MobileCapabilityType.NO_RESET;
-import static io.appium.java_client.remote.MobileCapabilityType.UDID;
-import static org.openqa.selenium.remote.CapabilityType.PLATFORM_NAME;
-
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
