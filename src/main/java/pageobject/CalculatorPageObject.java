@@ -1,23 +1,22 @@
 package pageobject;
 
 import enums.MathOperations;
-import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 /**
  * Created by v.matviichenko
  */
-public class CalculatorPageObject {
-	private AppiumDriver driver;
-
+public class CalculatorPageObject extends MainScreen {
 	private String appPkg = "com.android.calculator2:id/";
 	private By result = By.id(appPkg + "result");
 	private By equals = By.id(appPkg + "eq");
 	private final By advancedPad = By.id("pad_advanced");
 
-	public CalculatorPageObject(AppiumDriver driver) {
-		this.driver = driver;
+	public CalculatorPageObject(AndroidDriver<MobileElement> driver) {
+		super(driver);
 	}
 
 	public void clickOnDigitButton(int digit) {

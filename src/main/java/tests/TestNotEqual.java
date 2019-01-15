@@ -1,7 +1,5 @@
 package tests;
 
-import static com.google.inject.matcher.Matchers.not;
-import static enums.Constants.EXPECTED_RESULT_NOT_EQUALS;
 import static enums.Constants.EXPECTED_RESULT_SIN;
 import static enums.Constants.FIRST_INT;
 import static enums.Constants.SECOND_INT;
@@ -12,22 +10,19 @@ import static enums.MathOperations.MULTIPLY;
 import static enums.MathOperations.RIGHT_PARENTHESES;
 import static org.junit.Assert.assertNotEquals;
 
-import io.appium.java_client.AppiumDriver;
+import core.TestBase;
 import org.junit.Before;
 import org.junit.Test;
 import pageobject.CalculatorPageObject;
-import singelton.AppiumDriverSingleton;
 
 /**
  * Created by v.matviichenko
  */
-public class TestNotEqual {
-	private AppiumDriver driver;
+public class TestNotEqual extends TestBase {
 	private CalculatorPageObject pageObject;
 
 	@Before
-	public void setup() throws Exception {
-		driver = AppiumDriverSingleton.getInstance();
+	public void setup() {
 		pageObject = new CalculatorPageObject(driver);
 	}
 

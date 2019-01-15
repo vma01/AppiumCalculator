@@ -1,20 +1,35 @@
 package core;
 
-import java.net.MalformedURLException;
+import java.io.IOException;
 
-import pageobject.CalculatorPageObject;
-import singelton.AppiumDriverSingleton;
-import utils.GesturesController;
+
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
+import org.junit.BeforeClass;
+import utils.DriverManager;
+
 
 /**
  * Created by v.matviichenko
  */
 public class TestBase {
-//	protected AppiumDriverSingleton driver;
-//	protected GesturesController gesturesController;
+	protected static DriverManager driverManager = new DriverManager();
+	protected static AndroidDriver<MobileElement> driver;
 
-	public TestBase() {
-//		this.driver = App
-//		this.gesturesController = new GesturesController()
+	private static boolean initialized;
+
+	@BeforeClass
+	public static void setUp() throws IOException {
+		if (!initialized) {
+			driver = driverManager.setUp();
+			driver.resetApp();
+
+			initialized = true;
+		}
 	}
+
+//	@After
+//	public void launchApp() {
+//		driver.launchApp();
+//	}
 }

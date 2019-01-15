@@ -7,6 +7,7 @@ import static org.junit.Assert.assertEquals;
 import java.util.Arrays;
 import java.util.Collection;
 
+import core.TestBase;
 import enums.MathOperations;
 import io.appium.java_client.AppiumDriver;
 import org.junit.Before;
@@ -20,8 +21,7 @@ import singelton.AppiumDriverSingleton;
  * Created by v.matviichenko
  */
 @RunWith (Parameterized.class)
-public class TestMathOperations {
-	private AppiumDriver driver;
+public class TestMathOperations extends TestBase {
 	private CalculatorPageObject pageObject;
 
 	@Parameterized.Parameter()
@@ -46,8 +46,7 @@ public class TestMathOperations {
 	}
 
 	@Before
-	public void setup() throws Exception {
-		driver = AppiumDriverSingleton.getInstance();
+	public void setup() {
 		pageObject = new CalculatorPageObject(driver);
 	}
 

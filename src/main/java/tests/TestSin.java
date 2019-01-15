@@ -9,22 +9,19 @@ import static enums.MathOperations.SIN;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
 
-import io.appium.java_client.AppiumDriver;
+import core.TestBase;
 import org.junit.Before;
 import org.junit.Test;
 import pageobject.CalculatorPageObject;
-import singelton.AppiumDriverSingleton;
 
 /**
  * Created by v.matviichenko
  */
-public class TestSin {
-	private AppiumDriver driver;
+public class TestSin extends TestBase {
 	private CalculatorPageObject pageObject;
 
 	@Before
-	public void setup() throws Exception {
-		driver = AppiumDriverSingleton.getInstance();
+	public void setup() {
 		pageObject = new CalculatorPageObject(driver);
 	}
 
