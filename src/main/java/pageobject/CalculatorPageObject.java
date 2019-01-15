@@ -50,4 +50,9 @@ public class CalculatorPageObject {
 	public WebElement resultView() {
 		return driver.findElement(result);
 	}
+
+	public void openHistory() {
+//		MobileElement resultPad = driver.findElement(result);
+//		gesturesController.swipeInsideElement(Direction.DOWN, resultPad);
+	}
 }
