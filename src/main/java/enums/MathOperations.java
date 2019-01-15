@@ -6,8 +6,12 @@ package enums;
 public enum MathOperations {
 	PLUS("op_add"),
 	MINUS("op_sub"),
-	DIVIDE("op_div"),
-	MULTIPLY("op_mul");
+	SIN("fun_sin"),
+	PI("const_pi"),
+	MULTIPLY("op_mul"),
+	LEFT_PARENTHESES("lparen"),
+	RIGHT_PARENTHESES("rparen"),
+	DIVIDE("op_div");
 
 	private String id;
 

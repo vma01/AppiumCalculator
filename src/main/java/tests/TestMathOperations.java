@@ -54,10 +54,10 @@ public class TestMathOperations {
     @Test
     public void testMathOperation(){
         pageObject.clickOnDigitButton(firstValue);
-        pageObject.clickOnMathOperation(operation);
+        pageObject.selectMathOperation(operation);
         pageObject.clickOnDigitButton(secondValue);
-        pageObject.equalButton().click();
+        pageObject.clickOnEqualButton();
 
-        assertEquals("Operation sum doesn't work", Integer.parseInt(pageObject.resultView().getText()), expectedResult);
+        assertEquals("Base math operation is wrong", Integer.parseInt(pageObject.resultView().getText()), expectedResult);
     }
 }
