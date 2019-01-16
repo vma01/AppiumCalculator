@@ -10,20 +10,12 @@ import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
 
 import core.TestBase;
-import org.junit.Before;
 import org.junit.Test;
-import pageobject.CalculatorPageObject;
 
 /**
  * Created by v.matviichenko
  */
 public class TestSin extends TestBase {
-	private CalculatorPageObject pageObject;
-
-	@Before
-	public void setup() {
-		pageObject = new CalculatorPageObject(driver);
-	}
 
 	@Test
 	public void testSine() {

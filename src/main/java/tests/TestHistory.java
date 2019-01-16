@@ -1,23 +1,21 @@
 package tests;
 
+import static enums.Constants.EXPECTED_HISTORY_SIZE;
+import static org.junit.Assert.assertEquals;
+
 import core.TestBase;
-import org.junit.Before;
 import org.junit.Test;
-import pageobject.CalculatorPageObject;
 
 /**
  * Created by v.matviichenko
  */
 public class TestHistory extends TestBase {
-	private CalculatorPageObject pageObject;
-
-	@Before
-	public void setup() {
-		pageObject = new CalculatorPageObject(driver);
-	}
 
 	@Test
 	public void testHistory() {
 		pageObject.openHistory();
+		int historySize = pageObject.getHistory().size();
+
+		assertEquals("Size history is wrong", historySize, EXPECTED_HISTORY_SIZE);
 	}
 }

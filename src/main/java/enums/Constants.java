@@ -10,4 +10,5 @@ public class Constants {
 	public static final int SECOND_INT = 2;
 	public static final int THIRD_INT = 2;
 	public static final int EXPECTED_RESULT_NOT_EQUALS = 20;
+	public final static int EXPECTED_HISTORY_SIZE = 4;
 }

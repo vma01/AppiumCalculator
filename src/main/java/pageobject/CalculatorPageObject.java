@@ -1,5 +1,7 @@
 package pageobject;
 
+import java.util.List;
+
 import enums.MathOperations;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -14,6 +16,7 @@ public class CalculatorPageObject extends MainScreen {
 	private By result = By.id(appPkg + "result");
 	private By equals = By.id(appPkg + "eq");
 	private final By advancedPad = By.id("pad_advanced");
+	private final By history = By.id("history_formula");
 
 	public CalculatorPageObject(AndroidDriver<MobileElement> driver) {
 		super(driver);
@@ -51,7 +54,12 @@ public class CalculatorPageObject extends MainScreen {
 	}
 
 	public void openHistory() {
-//		MobileElement resultPad = driver.findElement(result);
-//		gesturesController.swipeInsideElement(Direction.DOWN, resultPad);
+		MobileElement resultPad = driver.findElement(result);
+		actionController.swipeElement(resultPad);
+	}
+
+	public List<MobileElement> getHistory() {
+		List<MobileElement> elements = driver.findElements(history);
+		return elements;
 	}
 }

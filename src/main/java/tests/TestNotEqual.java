@@ -1,6 +1,6 @@
 package tests;
 
-import static enums.Constants.EXPECTED_RESULT_SIN;
+import static enums.Constants.EXPECTED_RESULT_NOT_EQUALS;
 import static enums.Constants.FIRST_INT;
 import static enums.Constants.SECOND_INT;
 import static enums.Constants.THIRD_INT;
@@ -11,20 +11,12 @@ import static enums.MathOperations.RIGHT_PARENTHESES;
 import static org.junit.Assert.assertNotEquals;
 
 import core.TestBase;
-import org.junit.Before;
 import org.junit.Test;
-import pageobject.CalculatorPageObject;
 
 /**
  * Created by v.matviichenko
  */
 public class TestNotEqual extends TestBase {
-	private CalculatorPageObject pageObject;
-
-	@Before
-	public void setup() {
-		pageObject = new CalculatorPageObject(driver);
-	}
 
 	@Test
 	public void testNotEqual() {
@@ -41,6 +33,6 @@ public class TestNotEqual extends TestBase {
 		pageObject.clickOnDigitButton(THIRD_INT);
 		pageObject.clickOnEqualButton();
 
-		assertNotEquals("Result is equal", Integer.valueOf(pageObject.resultView().getText()), EXPECTED_RESULT_SIN);
+		assertNotEquals("Result is equal", Integer.parseInt(pageObject.resultView().getText()), EXPECTED_RESULT_NOT_EQUALS);
 	}
 }
